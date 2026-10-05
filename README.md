@@ -27,6 +27,16 @@ review-closing experiments actually executed and committed**.
 - Oracle ceilings (declared convention, `analysis/ceiling_convention.py`): 0.5387 / 0.5696
 - Limitation 4 (single split) closed for the TabPFN route; open for KPGT (per-molecule dumps pending)
 
+## Worked example (`example/`)
+Four-endpoint ADMET prediction for **GLP-1(7-37)** (UniProt P01275 res. 98-128)
+run end-to-end against the committed v4.2 checkpoints, with cached
+MoLFormer-XL / ESMC-600M embeddings and a live literature comparison
+(`example/README.md`, `example/results/ground_truth_literature.md`).
+Headline: plasma t1/2 predicted 18 min vs ~5 min measured (in-distribution);
+Caco-2 logPapp -11.1 vs measured GLP-1-class -5 to -7 (correct qualitative
+verdict, flagged out-of-domain by 170/3033 features beyond +-5 sigma - the
+molecular endpoints' training domain is MW<=1700 cyclic peptidomimetics).
+
 ## Status / remaining work before resubmission
 1. Re-dump KPGT test predictions (`--dump-test-predictions`) to attach bootstrap CIs to the KPGT deltas.
 2. Zenodo DOI for the frozen archive (promised in Data Availability).
