@@ -1,0 +1,24 @@
+{
+ "PAMPA_MDCK": {
+  "logPapp": -13.472504615783691,
+  "ood_features_gt5sigma": 170
+ },
+ "Caco2": {
+  "logPapp": -11.080556869506836,
+  "ood_features_gt5sigma": 170
+ },
+ "Hemolysis_ood": 7,
+ "Hemolysis": 0.028810933232307434,
+ "Half_life_ood": 5,
+ "Half_life": {
+  "log10_t_half_s": 3.038919448852539,
+  "t_half_s": 1093.7534825774185
+ },
+ "_meta": {
+  "peptide": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGRG",
+  "name": "GLP-1(7-37)",
+  "mw": 3355.7,
+  "smiles_len": 568,
+  "smiles": "CC[C@H](C)[C@H](NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CCCCN)NC(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(N)=O)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@@H](NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@@H](NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@@H](NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@@H](N)Cc1c[nH]cn1)[C@@H](C)O)[C@@H](C)O)C(C)C)C(=O)N[C@@H](C)C(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)N[C@@H](CC(C)C)C(=O)N[C@H](C(=O)N[C@@H](CCCCN)C(=O)NCC(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)O)C(C)C"
+ }
+}

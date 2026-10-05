@@ -1,0 +1,48 @@
+{
+ "GLP-1(7-37)": {
+  "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGRG",
+  "n_res": 31,
+  "mw": 3355.7,
+  "smiles_len": 568,
+  "PAMPA_MDCK": {
+   "logPapp": -13.375,
+   "ood_features_gt5sigma": 171
+  },
+  "Caco2": {
+   "logPapp": -11.156,
+   "ood_features_gt5sigma": 172
+  },
+  "Hemolysis": {
+   "p_hemolytic": 0.029,
+   "ood_features_gt5sigma": 7
+  },
+  "Half_life": {
+   "log10_t_half_s": 3.039,
+   "t_half_s": 1093.8,
+   "ood_features_gt5sigma": 5
+  }
+ },
+ "GLP-1(7-36)": {
+  "sequence": "HAEGTFTSDVSSYLEGQAAKEFIAWLVKGR",
+  "n_res": 30,
+  "mw": 3298.7,
+  "smiles_len": 561,
+  "PAMPA_MDCK": {
+   "logPapp": -13.219,
+   "ood_features_gt5sigma": 172
+  },
+  "Caco2": {
+   "logPapp": -11.199,
+   "ood_features_gt5sigma": 174
+  },
+  "Hemolysis": {
+   "p_hemolytic": 0.03,
+   "ood_features_gt5sigma": 8
+  },
+  "Half_life": {
+   "log10_t_half_s": 2.962,
+   "t_half_s": 916.3,
+   "ood_features_gt5sigma": 5
+  }
+ }
+}

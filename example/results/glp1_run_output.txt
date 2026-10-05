@@ -1,0 +1,9 @@
+peptide      : GLP-1(7-37), 31 aa, MW 3355.7 Da
+smiles       : 568 chars, canonical RDKit linear peptide
+
+PAMPA_MDCK : logPapp =  -13.473  (at/below assay floor; 170 features beyond +-5 sigma of the training distribution)
+Caco2      : logPapp =  -11.081  (at/below assay floor; 170 features beyond +-5 sigma of the training distribution)
+Hemolysis  : hemolytic probability =  0.029  (predicted non-hemolytic @0.5)
+Half_life  : log10 t1/2 =  3.039  -> t1/2 = 1,094 s (18.2 min)
+
+wrote C:\Users\c00js\AppData\Local\Temp\example\results\glp1_predictions.json
