@@ -1,0 +1,101 @@
+{
+ "protocol": "paired bootstrap, 10000 resamples, common random numbers, percentile CI (analysis/bootstrap_ci.py)",
+ "tabpfn_vs_committed_baseline": {
+  "PAMPA_split42_dR2_vs_MLP_baseline": {
+   "delta": 0.0328,
+   "ci": [
+    0.0092,
+    0.0554
+   ],
+   "p_delta_le_0": 0.0027,
+   "note": "TabPFN 3-seed mean vs committed checkpoint"
+  },
+  "CACO2_split42_dR2_vs_MLP_baseline": {
+   "delta": 0.0527,
+   "ci": [
+    0.02,
+    0.0879
+   ],
+   "p_delta_le_0": 0.0008,
+   "note": "TabPFN 3-seed mean vs re-measured checkpoint"
+  }
+ },
+ "tabpfn_vs_retrained_splitmatched_baseline": {
+  "PAMPA/split42": {
+   "tabpfn": 0.4969786094510146,
+   "baseline_retrained": 0.46560743183585795,
+   "dR2": 0.03137117761515662,
+   "ci": [
+    0.007743084220301017,
+    0.05418848872236927
+   ],
+   "p_le0": 0.005,
+   "n_floor": 47
+  },
+  "PAMPA/split7": {
+   "tabpfn": 0.47422211639473544,
+   "baseline_retrained": 0.40591481993478773,
+   "dR2": 0.06830729645994771,
+   "ci": [
+    0.04625806543765849,
+    0.09037200716614364
+   ],
+   "p_le0": 0.0,
+   "n_floor": 53
+  },
+  "PAMPA/split123": {
+   "tabpfn": 0.5078844177329673,
+   "baseline_retrained": 0.4429776611107783,
+   "dR2": 0.06490675662218903,
+   "ci": [
+    0.030617412157572042,
+    0.09706112255654081
+   ],
+   "p_le0": 0.0001,
+   "n_floor": 53
+  },
+  "CACO2/split42": {
+   "tabpfn": 0.44363052037654416,
+   "baseline_retrained": 0.3926098844603282,
+   "dR2": 0.05102063591621597,
+   "ci": [
+    0.01989538422074012,
+    0.0846095608773226
+   ],
+   "p_le0": 0.0009,
+   "n_floor": 39
+  },
+  "CACO2/split7": {
+   "tabpfn": 0.4192699739647132,
+   "baseline_retrained": 0.3603154015793433,
+   "dR2": 0.05895457238536994,
+   "ci": [
+    0.029854459805472446,
+    0.09037281533620024
+   ],
+   "p_le0": 0.0,
+   "n_floor": 49
+  },
+  "CACO2/split123": {
+   "tabpfn": 0.40046103475412387,
+   "baseline_retrained": 0.35742198585323026,
+   "dR2": 0.043039048900893606,
+   "ci": [
+    0.00885310827585234,
+    0.07598829116762844
+   ],
+   "p_le0": 0.0059,
+   "n_floor": 45
+  }
+ },
+ "kpgt_deltas_from_committed_summaries": {
+  "PAMPA": {
+   "delta": 0.0492,
+   "rationale": "mean 0.5134 vs baseline 0.4642; per-molecule preds not committed; CI pending KPGT dump"
+  },
+  "CACO2": {
+   "delta": 0.0204,
+   "rationale": "mean 0.4113 vs re-measured baseline 0.3909; CI pending KPGT dump"
+  }
+ }
+}

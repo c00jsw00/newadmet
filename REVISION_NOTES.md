@@ -41,10 +41,18 @@ Revised manuscript responding to expert peer review of the peptide ADMET benchma
     repository URL updated throughout; replicate-row handling (7,283 rows / 7,177 unique
     SMILES) documented in §2.1; planned figures listed for resubmission.
 
+## New in v2.1 (this push): experiments actually executed
+- **Ceiling convention made exact and reproducible** (`analysis/ceiling_convention.py`): declared convention is floor → test-partition grand mean; reproduces published ceilings exactly (PAMPA 0.5387, Caco-2 0.5696) and documents why the "censored-mean" variant is degenerate (R²=1). §2.5/§2.1 updated; floor counts per partition (196/26/47) and floor share of test SST (46.1%) added.
+- **Real paired bootstrap CIs** (`analysis/bootstrap_ci.py`, predictions committed under `results/predictions/`): TabPFN vs baseline PAMPA +0.033 [+0.009, +0.055] P(Δ≤0)=0.003; Caco-2 +0.053 [+0.020, +0.088] P(Δ≤0)<0.001.
+- **Multi-split replication completed** (§3.7; `analysis/run_multisplit.py`, `analysis/retrain_splits.py`): TabPFN beats split-matched from-scratch-retrained MLP baselines on all 6 split×endpoint pairs, all CIs exclude zero. Limitation 4 closed for TabPFN.
+- **Caco-2 baseline corrected**: checkpoint re-measurement gives 0.3909/0.5111 (matches committed summary.json); all Δ values in §3.5/Table 4 re-based accordingly.
+- **Tobit diagnosis sourced from committed artifacts** (σ≈0.886, route4_results.json); EM probe (`analysis/em_reconstruction.py`) reported honestly as a negative control on the learner family (0.497 vs 0.632 non-floor), with KPGT+EM named as the decisive future experiment.
+- **Figures rendered** (`figures/fig1_scatter.png`, `fig2_decomposition.png`, `fig3_ceiling.png`) from committed predictions — planned-figures placeholder removed.
+- Replicate audit (104 duplicated SMILES groups; only 7 disagree, max spread 2.0 log units) added to §2.1.
+
 ## Honest caveats
-- Bootstrap CIs: the protocol and the generating script location are documented, but the
-  per-comparison interval values are to be filled from `results/` before resubmission —
-  no interval numbers are asserted in the text that were not actually computed.
+- KPGT per-molecule predictions were not committed by the training loop, so KPGT deltas
+  quote committed summary statistics only; CIs for KPGT await a re-dump (`--dump-test-predictions`).
 - The KPGT pretraining-corpus figure ("1.6 M molecules") was removed pending verification
   against the published KDD paper.
 - Figure assets and the graphical abstract remain marked "to be rendered".
